@@ -1,0 +1,13 @@
+<h1>all users</h1><p><a href="/users/create">Create</a></p>
+{% for user in users %}
+    {{ user.first_name }}
+    {{ user.middle_name }}
+    {{ user.last_name }}
+    {{ user.email }}
+    {{ user.created_at }}
+    {{ user.updated_at }}
+    {{ user.get_role_name }}
+    <a href="/users/{{ user.pk }}/update">Update</a>
+    <a href="/users/{{ user.pk }}/delete">Delete</a>
+    <br>
+{% endfor %}
